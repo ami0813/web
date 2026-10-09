@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+<!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--ヘッダー-->    
+    <header class="header">
+            <h1 class="site-title">
+                <a href="index.html">第65回 椙大祭</a>
+            </h1>
+            <!--ハンバーガー-->
+            <button class="menu-btn">☰</button>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="festival-1.png" alt="大学祭　ロゴ">
+        </section> 
+
+        <section class="section">
+            <h2>アクセス</h2>
+
+            <div class="access-info">
+    <p class="access-item"><strong>場所：</strong>椙山女学園大学（星が丘キャンパス）</p>
+    <p class="access-item"><strong>住所：</strong>愛知県名古屋市千種区星が丘元町17-3</p>
+    <p class="access-item">
+        <strong>最寄駅：</strong>地下鉄東山線「星ヶ丘駅」 
+        <span class="exit-badge">6番出口</span> より徒歩約5分
+    </p>
+    <p class="access-note">※6番出口を出て左手（坂を上る方向）へ進むと大学正門に到着します。</p>
+</div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26095.112109104128!2d136.96943463955074!3d35.15938860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60036549311adc71%3A0x364e12457b6e4704!2z5qSZ5bGx5aWz5a2m5ZyS5aSn5a2m!5e0!3m2!1sja!2sjp!4v1776583918923!5m2!1sja!2sjp" 
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="map-link">
+                <a href="https://www.google.com/maps?q=椙山女学園大学+星が丘キャンパス" target="_blank" rel="noopener noreferrer">
+                Googleマップで開く
+                </a>
+            </div>
+
+        </section>
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">トップへ戻る</a>
+        </div>
+    </main>
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+    
+
+
+<!-- ★ここに追加（モーダル） -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <div class="modal-header">
+                <span id="modal-tag" class="news-tag"></span>
+                <span id="modal-date" class="news-date"></span>
+            </div>
+
+<h2 id="modal-title"></h2>
+<p id="modal-detail"></p>
+
+            <p class="modal-contact">
+            お問い合わせ：〇〇@〇〇.jp
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- ★ここに追加（JS） -->
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        const items = document.querySelectorAll(".news-item");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDetail = document.getElementById("modal-detail");
+        const closeBtn = document.querySelector(".close");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+
+            modal.style.display = "block";
+        });
+        });
+
+        closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });
+
+        const modalTag = document.getElementById("modal-tag");
+        const modalDate = document.getElementById("modal-date");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+            modalTag.textContent = item.dataset.tag;
+            modalDate.textContent = item.dataset.date;
+
+            modal.style.display = "block";
+        });
+        });
+    </script>
+
+    
+    
+</body>
+
+</html>

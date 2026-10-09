@@ -1,0 +1,348 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+    <!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+
+    <!-- タブ切り替え用のスタイリング（style.cssに移動してもOKです） -->
+    <style>
+        .floor-map-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* 建物タブ */
+        .building-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .building-tab-btn {
+            padding: 10px 20px;
+            border: 2px solid #fce7a2;
+            background-color: #fff;
+            color: #fcdb71;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .building-tab-btn.active,
+        .building-tab-btn:hover {
+            background-color: #ffd23e;
+            color: #fff;
+        }
+
+        /* 建物コンテンツ */
+        .building-content {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .building-content.active {
+            display: block;
+        }
+
+        /* フロア（階数）タブ */
+        .floor-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .floor-tab-btn {
+            padding: 6px 16px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            color: #555;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .floor-tab-btn.active {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        /* フロアマップ画像表示エリア */
+        .floor-map-panel {
+            display: none;
+        }
+
+        .floor-map-panel.active {
+            display: block;
+        }
+
+        .floor-map-panel img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<!--ヘッダー-->    
+    <header class="header">
+            <h1 class="site-title">
+                <a href="index.html">第65回 椙大祭</a>
+            </h1>
+            <!--ハンバーガー-->
+            <button class="menu-btn">☰</button>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="festival-1.png" alt="大学祭 ロゴ">
+        </section> 
+
+        <section class="map-section">
+            <div class="map-card-box">
+                <!-- リンク -->
+                <div class="map-link-area">
+                <a href="plan.html" class="map-link">企画一覧はこちらから</a>
+                </div>
+                
+                <!-- 画像枠 -->
+                <div class="map-image-wrapper">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- ★ここから追加：フロアマップ・タブ切り替えエリア -->
+        <section class="floor-map-section">
+            <h2 class="section-title">各棟フロアマップ</h2>
+
+            <!-- 1. 建物選択タブ -->
+            <div class="building-tabs">
+                <button class="building-tab-btn active" data-building="gaikoku">外国語学部棟</button>
+                <button class="building-tab-btn" data-building="joho">情報社会学部棟</button>
+                <button class="building-tab-btn" data-building="seikatsu">生活科学部棟</button>
+            </div>
+
+            <!-- 2-A. 外国語学部棟 -->
+            <div id="gaikoku" class="building-content active">
+                <div class="floor-tabs">
+                    <button class="floor-tab-btn active" data-floor="gaikoku-1f">1F</button>
+                    <button class="floor-tab-btn" data-floor="gaikoku-2f">2F</button>
+                    <button class="floor-tab-btn" data-floor="gaikoku-3f">3F</button>
+                    <button class="floor-tab-btn" data-floor="gaikoku-4f">4F</button>
+                    <button class="floor-tab-btn" data-floor="gaikoku-5f">5F</button>
+                </div>
+                <div id="gaikoku-1f" class="floor-map-panel active">
+                    <img src="外国1Fマップ.jpg" alt="外国語学部棟 1Fフロアマップ">
+                </div>
+                <div id="gaikoku-2f" class="floor-map-panel">
+                    <img src="外国2Fマップ.jpg" alt="外国語学部棟 2Fフロアマップ">
+                </div>
+                <div id="gaikoku-3f" class="floor-map-panel">
+                    <img src="外国3Fマップ.jpg" alt="外国語学部棟 3Fフロアマップ">
+                </div>
+                <div id="gaikoku-4f" class="floor-map-panel">
+                    <img src="外国4Fマップ.jpg" alt="外国語学部棟 4Fフロアマップ">
+                </div>
+                <div id="gaikoku-5f" class="floor-map-panel">
+                    <img src="外国5Fマップ.jpg" alt="外国語学部棟 5Fフロアマップ">
+                </div>
+            </div>
+
+            <!-- 2-B. 情報社会学部棟 -->
+            <div id="joho" class="building-content">
+                <div class="floor-tabs">
+                    <button class="floor-tab-btn active" data-floor="joho-5f">5F</button>
+                </div>
+                <div id="joho-5f" class="floor-map-panel active">
+                    <img src="情社5Fマップ.png" alt="情報社会学部棟 5Fフロアマップ">
+                </div>
+            </div>
+
+            <!-- 2-C. 生活科学部棟 -->
+            <div id="seikatsu" class="building-content">
+                <div class="floor-tabs">
+                    <button class="floor-tab-btn active" data-floor="seikatsu-0f">地下1F</button>
+                    <button class="floor-tab-btn" data-floor="seikatsu-1f">1F</button>
+                </div>
+                <div id="seikatsu-0f" class="floor-map-panel active">
+                    <img src="生活地下１階.png" alt="生活科学部棟 地下1Fフロアマップ">
+                </div>
+                <div id="seikatsu-1f" class="floor-map-panel">
+                    <img src="生活1階.png" alt="生活科学部棟 1Fフロアマップ">
+                </div>
+            </div>
+        </section>
+        <!-- ★ここまで追加 -->
+
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">トップへ戻る</a>
+        </div>    
+    </main>
+
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <span id="modal-tag" class="news-tag"></span>
+                <span id="modal-date" class="news-date"></span>
+            </div>
+            <h2 id="modal-title"></h2>
+            <p id="modal-detail"></p>
+            <p class="modal-contact">
+            お問い合わせ：〇〇@〇〇.jp
+            </p>
+        </div>
+    </div>
+
+    <!-- JSスクリプト -->
+    <script>
+        // ハンバーガーメニュー
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        // モーダル処理
+        const items = document.querySelectorAll(".news-item");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDetail = document.getElementById("modal-detail");
+        const modalTag = document.getElementById("modal-tag");
+        const modalDate = document.getElementById("modal-date");
+        const closeBtn = document.querySelector(".close");
+
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                modalTitle.textContent = item.dataset.title;
+                modalDetail.textContent = item.dataset.detail;
+                modalTag.textContent = item.dataset.tag;
+                modalDate.textContent = item.dataset.date;
+                modal.style.display = "block";
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        }
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // ★追加：マップタブ切り替え機能（JavaScript）
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. 建物タブ切り替え
+            const buildingBtns = document.querySelectorAll(".building-tab-btn");
+            const buildingContents = document.querySelectorAll(".building-content");
+
+            buildingBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    buildingBtns.forEach(b => b.classList.remove("active"));
+                    buildingContents.forEach(c => c.classList.remove("active"));
+
+                    btn.classList.add("active");
+                    const targetBuilding = document.getElementById(btn.dataset.building);
+                    if (targetBuilding) {
+                        targetBuilding.classList.add("active");
+                    }
+                });
+            });
+
+            // 2. フロア（階数）タブ切り替え
+            const floorBtns = document.querySelectorAll(".floor-tab-btn");
+
+            floorBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const parentContent = btn.closest(".building-content");
+                    const parentFloorBtns = parentContent.querySelectorAll(".floor-tab-btn");
+                    const parentPanels = parentContent.querySelectorAll(".floor-map-panel");
+
+                    parentFloorBtns.forEach(b => b.classList.remove("active"));
+                    parentPanels.forEach(p => p.classList.remove("active"));
+
+                    btn.classList.add("active");
+                    const targetFloor = parentContent.querySelector("#" + btn.dataset.floor);
+                    if (targetFloor) {
+                        targetFloor.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="google-site-verification" content="pGlSo6vmp-1vOsTcs_d84zreEefITFAhDXv45ZRfmOY" />
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+    <!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--ヘッダー-->    
+    <header class="header">
+        <h1 class="site-title">
+            <a href="index.html">第65回 椙大祭</a>
+        </h1>
+
+        <!--ハンバーガー-->
+        <button class="menu-btn">☰</button>
+
+        <nav class="nav">
+            <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="festival-1.png" alt="大学祭 ロゴ">
+            
+            <!-- カウントダウン表示エリア（初期状態は隠す） -->
+            <div class="countdown-container" style="visibility: hidden;">
+                <p class="countdown-title">開催まであと</p>
+                <div class="countdown-timer">
+                    <span id="days">00</span>日
+                    <span id="hours">00</span>時間
+                    <span id="minutes">00</span>分
+                    <span id="seconds">00</span>秒
+                </div>
+            </div>
+
+            <div class="event-info">
+                    <p class="event-main">第65回椙大祭</p>
+                    <p class="theme-title">
+                        <span class="catchphrase">Re.Start</span>
+                    </p>
+                    <p class="event-sub">2026年10月17日(土)～10月18日(日)</p>
+            </div>
+            <p class="coming-soon">
+                    <span class="small-text">テーマ</span><br>
+                   「 <span>Re.Start</span> 」<br>
+                    <span class="small-text">第65回椙大祭のテーマは「Re.Start」です。
+                        このテーマには、<br>これまでの経験を糧に、新たな一歩を踏み出すという思いが込められています。<br>大学祭を通して、新しいことに挑戦するきっかけや、人との出会い、<br>
+                        新たな発見につながる場となることを目指しています。<br>
+                        今年の椙大祭も目一杯楽しんでいってください。</span><br>
+            </p>
+     <!-- ボタン -->
+    <div class="menu-grid">
+    <!-- 上段：3個 -->
+    <div class="menu-row">
+        <a href="plan.html" class="menu-card">企画一覧</a>
+        <a href="time.html" class="menu-card">タイムテーブル</a>
+        <a href="map.html" class="menu-card">学内マップ</a>
+    </div>
+    <!-- 下段：3個 -->
+    <div class="menu-row">
+        <a href="access.html" class="menu-card">アクセス</a>
+        <a href="QA.html" class="menu-card">Q&A</a>
+        <a href="sponsor.html" class="menu-card">協力企業・協力団体</a>
+        <a href="character.html" class="menu-card">その他</a>
+    </div>
+</div>
+<!-- ゲストトークショー（目玉企画バナー） -->
+<section class="talkshow-banner-section">
+    <div class="talkshow-banner-card">
+        <div class="talkshow-badge">SPECIAL GUEST</div>
+        <h3 class="talkshow-main-title">トークショー・俳優トークショー開催！</h3>
+        
+        <div class="talkshow-guest-container">
+            <!-- Day1：いわたまありさん -->
+            <div class="talkshow-guest-item">
+                <img src="いわた.png" alt="いわたまありさん">
+                <div class="guest-info">
+                    <span class="day-badge">【Day1】10/17(土)</span>
+                    <p class="guest-name">いわたまありさん</p>
+                    <a href="1日目.html" class="talkshow-btn">詳細・チケット ＞</a>
+                </div>
+            </div>
+
+            <div class="talkshow-divider"></div>
+
+            <!-- Day2：松本怜生さん -->
+            <div class="talkshow-guest-item">
+                <img src="松本.png" alt="松本怜生さん"class="matsumoto-img">
+                <div class="guest-info">
+                    <span class="day-badge">【Day2】10/18(日)</span>
+                    <p class="guest-name">松本怜生さん</p>
+                    <a href="2日目.html" class="talkshow-btn">詳細・チケット ＞</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="news" class="news-section">
+  <h2 class="news-title">お知らせ</h2>
+  
+  <!-- スクロールさせる外枠 -->
+  <div class="news-container">
+
+    <!-- 項目1：公式サイト公開 -->
+<div class="news-item" 
+     data-title="公式サイト公開" 
+     data-detail="第65回椙大祭の公式HPを公開しました。" 
+     data-tag="その他" 
+     data-date="2026.00.00">
+    <div class="news-meta">
+        <span class="news-tag">その他</span>
+        <span class="news-date">2026.00.00</span>
+    </div>
+    <p class="news-item-title">公式サイト公開</p>
+</div>
+
+<!-- 項目2：チケット情報（★ここをチケット用に変更しました★） -->
+<div class="news-item" 
+     data-title="トークショー・俳優トークショーチケット好評発売中！" 
+     data-detail="トークショー・俳優トークショー（いわたまありさん・松本怜生さん）のチケットがイープラスにて好評発売中です！詳細は各ゲストページまたはステージ企画ページをご確認ください。" 
+     data-tag="チケット" 
+     data-date="2026.00.00">
+    <div class="news-meta">
+        <span class="news-tag">チケット</span>
+        <span class="news-date">2026.00.00</span>
+    </div>
+    <p class="news-item-title">トークショー・俳優トークショーチケット好評発売中！（イープラス）</p>
+</div>
+
+<!-- モーダル本体（共通で1つあればOKです） -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span id="modal-tag" class="news-tag"></span>
+            <span id="modal-date" class="news-date"></span>
+        </div>
+        <h2 id="modal-title"></h2>
+        <p id="modal-detail"></p>
+        <p class="modal-contact">
+            お問い合わせ：daisai@g.sugiyama-u.ac.jp
+        </p>
+    </div>
+</div>
+</section>
+            <!-- ★ここから追加：学長挨拶ブロック -->
+<div class="greeting-container">
+    <h2>学長挨拶</h2>
+    <p class="greeting-title">椙山女学園大学 学長 黒田由彦</p>
+    
+    <div class="greeting-body">
+        <p>第65回椙大祭の開催、誠におめでとうございます。</p>
+        <p>今年の椙大祭のテーマ「Re.Start」には、これまでの経験を活かしながら新たな一歩を踏み出し、次のステージへ向かう挑戦の場にしたいという思いが込められていると聞きました。</p>
+        <p>過去の経験を糧として未来へ進む姿勢は、学びを深め成長を続ける大学生にふさわしい、大変意義深いテーマであると思います。</p>    
+        <p>10月17日（土）、18日（日）に開催される椙大祭が、学生の皆さんにとって新しいことに挑戦し、自らの可能性を広げる機会となることを期待しています。</p>
+        <p>また、ご来場の皆様との交流を通じて、新たな発見やつながりが生まれることを願っています。</p>
+        <p>最後になりましたが、開催に向けて長い時間をかけて準備を進めてこられた大学祭実行委員会の皆さんをはじめ、関係する学生の皆さんに心より感謝申し上げます。</p>
+        <p>第65回椙大祭が、参加した人たち全員の思い出に残るような、素晴らしい大学祭となることを祈念いたします。</p>
+    </div>
+
+    <!-- 学長写真（画像ファイル名を指定してください） -->
+    <div class="greeting-image-box">
+        <img src="黒田学長.jpg" alt="学長 黒田由彦先生" class="greeting-image">
+    </div>
+</div>
+<div class="greeting-container">
+    <h2>委員長挨拶</h2>
+    <p class="greeting-title">大学祭実行委員会 委員長 加藤花捺</p>
+    
+    <div class="greeting-body">
+        <p>本日は第65回椙大祭にお越しいただき誠にありがとうございます。今年度も椙大祭の開催を迎えることができ、大変喜ばしく感じております。さて、今年度のテーマは"Re.Start"です。</p>
+        <p>これまで築き上げてきたものを大切に受け継ぎながら、さらに進化した大学祭をつくっていく。そのために、これまでの経験を活かし、初心に返って新たな一歩を踏み出すという思いを込めました。</p>
+        <p>ご来場いただいた皆様にとって、この2日間が忘れられない思い出のひとつとなるよう、私たち大学祭実行委員会は最後まで尽力いたします。ぜひ、最後までお楽しみください。</p>
+        <p>最後となりましたが、開催にあたりお力添えいただいた皆様に深くお礼を申し上げ、</p>
+        <p>ご挨拶とさせていただきます。</p>
+    </div>
+    <!-- 学長写真（画像ファイル名を指定してください） -->
+    <div class="greeting-image-box">
+        <img src="委員長写真.png" alt="委員長挨拶 委員長 加藤花捺" class="greeting-image">
+    </div>
+</div>
+<div class="character-container">
+    <h2>椙大祭 公式キャラクター</h2>
+    
+    <!-- 横並びにするための親要素 -->
+    <div class="character-wrapper">
+        
+        <!-- 1つ目のキャラクター -->
+        <div class="character-card">
+            <div class="character-image-box">
+                <img src="images/すぎベア背景透過.png" alt="すぎべあ" class="character-image">
+            </div>
+            <p class="character-name">すぎべあ</p>
+        </div>
+
+        <!-- 2つ目のキャラクター -->
+        <div class="character-card">
+            <div class="character-image-box">
+                <img src="images/すぎたま背景透過.png" alt="べるたま" class="character-image">
+            </div>
+            <p class="character-name">べるたま</p>
+        </div>
+
+    </div>
+</div>
+        </section> 
+    </main>
+
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+
+    <!-- JS（スクリプト）エリア -->
+    <script>
+        // カウントダウン処理
+        function updateCountdown() {
+            const targetDate = new Date("2026/10/17 10:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.querySelector(".countdown-container").innerHTML = "<p class='countdown-title'>本日開催中！</p>";
+                document.querySelector(".countdown-container").style.visibility = "visible";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = String(days).padStart(2, "0");
+            document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+
+            // 計算が完了したら表示する
+            document.querySelector(".countdown-container").style.visibility = "visible";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // メニュー＆モーダル処理
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        const items = document.querySelectorAll(".news-item");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDetail = document.getElementById("modal-detail");
+        const closeBtn = document.querySelector(".close");
+        const modalTag = document.getElementById("modal-tag");
+        const modalDate = document.getElementById("modal-date");
+
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                modalTitle.textContent = item.dataset.title;
+                modalDetail.textContent = item.dataset.detail;
+                modalTag.textContent = item.dataset.tag;
+                modalDate.textContent = item.dataset.date;
+
+                modal.style.display = "block";
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

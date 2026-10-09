@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+<!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+
+    <!-- トークショーページ用の追加CSS -->
+    <style>
+        .talkshow-section {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* ヘッダー画像/タイトル */
+        .talkshow-header-img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* 俳優名 */
+        .actor-name-box {
+            margin: 30px 0;
+        }
+        .actor-name {
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #000000;
+        }
+        .actor-honorific {
+            font-size: 24px;
+            font-weight: normal;
+            font-style: italic;
+            margin-left: 15px;
+        }
+
+        /* 俳優写真 */
+        .actor-image-container {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+        .actor-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 出演作品 */
+        .works-section {
+            margin: 40px 0 50px;
+        }
+        .works-title {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        .works-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        /* 開催情報（日時・場所） */
+        .info-section {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: baseline;
+        }
+        .info-label {
+            font-weight: bold;
+            font-size: 22px;
+            width: 80px;
+            flex-shrink: 0;
+            text-decoration: underline;
+        }
+
+        /* チケット料金 */
+        .ticket-section {
+            margin: 40px 0;
+        }
+        .ticket-title {
+            font-size: 26px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        .ticket-price {
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        /* 注意事項 */
+        .notice-title {
+            color: #e50012;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<!--ヘッダー-->    
+    <header class="header">
+            <h1 class="site-title">
+                <a href="index.html">第65回 椙大祭</a>
+            </h1>
+
+            <!--ハンバーガー-->
+            <button class="menu-btn">☰</button>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="festival-1.png" alt="大学祭 ロゴ">
+        </section> 
+
+        <!-- ★ここから俳優トークショーのコンテンツ領域★ -->
+        <section class="talkshow-section">
+            <!-- 2. 俳優名 -->
+    <div class="actor-name-box">
+    <span class="actor-name">
+        <ruby>松本<rt>まつもと</rt></ruby>
+        <ruby>怜生<rt>れお</rt></ruby>
+    </span>
+    <span class="actor-honorific">さん</span>
+</div>
+
+            <!-- 3. 俳優写真（※画像ファイル名を指定してください） -->
+            <div class="actor-image-container">
+                <img src="松本怜生宣材写真.jpg" alt="松本怜生さん" class="actor-image">
+            </div>
+
+            <!-- 4. 出演作品 -->
+            <div class="works-section">
+                <h2 class="works-title">＜出演作品＞</h2>
+                <ul class="works-list">
+                    <li>2026年大河ドラマ「#豊臣兄弟！」石田光成役</li>
+                    <li>Prime Video「#人間標本」深沢蒼役</li>
+                    <li>ドラマイムズ「#新東京水上警察」三上慎吾役</li>
+                    <li>TBSドラマストリーム「#シンデレラクロゼット」神山光役 等</li>
+                </ul>
+            </div>
+
+            <!-- 5. 日時・場所 -->
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">日時</span>
+                    <div class="info-detail">
+                        <p>学生開場：10月18日（日）12:30〜12:50</p>
+                        <p>一般開場：10月18日（日）12:55〜13:20</p>
+                        <p>開演：10月18日（日）13:30〜14:30</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">場所</span>
+                    <span>情報社会学部(旧文化情報学部)メディア棟001</span>
+                </div>
+            </div>
+             <div class="ticket-section">
+                <span class="info-label">チケット販売スケジュール</span>
+                <div class="ticket-price">
+                    <p>※大学祭実行委員の方で座席をきめさせていただくため、全席<br>指定席となっております。</p>
+                </div>
+            </div>
+            <!-- 6. チケット料金 -->
+            <div class="ticket-section">
+                <span class="info-label">チケット料金</span>
+                <div class="ticket-price">
+                    <p>学内先行販売(先着)</p>
+                    <p>受付期間：2026年9月1日(火)10:00～9月8日(火)23:00</p>
+                    <p>料金：1000円+手数料</p>
+                    <p>学生先行チケットURLは、S*map(学内生専用サイト)に記載</p>
+                </div>
+            </div>
+            <div class="ticket-section">
+                <div class="ticket-price">
+                    <p>一般販売(先着)</p>
+                    <p>受付期間：2026年9月10日(木)10:00～公演前日18:00まで(無くなり次第終了)</p>
+                    <p>料金：1500円+手数料</p>
+                </div>
+            </div>
+            <div class="ticket-section">
+                <div class="ticket-price">
+                    <p>イープラスにてチケット販売</p>
+                    <a href="https://eplus.jp/sf/detail/4593890001-P0030001" target="_blank" rel="noopener noreferrer">https://eplus.jp/sf/detail/4593890001-P0030001</a><br>
+                    <p>・トークショー当日は、1000円で立見席の当日券を販売予定です(数量限定)。</p>
+                    <p>・前売券の販売状況に応じて、当日着席券を販売する場合があります<br>(当日券価格は前売券価格と異なる場合があります)。</p>
+                </div>
+            </div>
+
+            <!-- 7. 注意事項見出し -->
+            <p class="notice-title">※注意事項※</p>
+                <div class="ticket-section">
+                <div class="ticket-price">
+                    <p>・俳優トークショー中のカメラ・携帯電話・スマートフォン・ICレコーダー等<br>による撮影
+                    ・録画はすべて禁止です。</p>
+                    <p>・スタッフの指示に従わない場合、退場していただくこともございますのでご協力お願いいたします。</p>
+                    <p>・転売目的でのご購入はお控えください。</p>
+                    <p>・学内生は当日、学生証をご持参のうえご来場ください。</p>
+                    <p>・入場の際、本人確認を行う可能性がございます。</p>
+                    <p>・同行者さまとお席が離れる場合もございますので、予めご了承ください。</p>
+                    <p>・申し込み手続き完了後、予約キャンセルはできかねますので、予めご注意ください。</p>
+                    <p>・車いす席をご希望されるお客様は、購入前に椙山女学園大学大学祭実行委員会(mailto:concert.sugi@gmail.com)までご連絡ください。</p>
+                    <p>※出演者は予告なしに変更となる場合がございます、予めご了承ください。</p>
+                </div>
+            </div>
+            <div class="ticket-section">
+                <div class="ticket-price">
+                    <p>●お問い合わせ</p>
+                    <a href="mailto:concert.sugi@gmail.com">椙大祭実行委員会コンサート部 concert.sugi@gmail.com</a>
+                </div>
+            </div>
+        </section>
+        <div class="back-btn-sister">
+            <a href="stage.html" class="back-btn">ステージ企画に戻る</a>
+        </div>
+        <!-- ★俳優トークショーコンテンツここまで★ -->
+
+    </main>
+    
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+    
+
+
+<!-- ★ここに追加（モーダル） -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <div class="modal-header">
+                <span id="modal-tag" class="news-tag"></span>
+                <span id="modal-date" class="news-date"></span>
+            </div>
+
+<h2 id="modal-title"></h2>
+<p id="modal-detail"></p>
+
+            <p class="modal-contact">
+            お問い合わせ：〇〇@〇〇.jp
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- ★ここに追加（JS） -->
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        const items = document.querySelectorAll(".news-item");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDetail = document.getElementById("modal-detail");
+        const closeBtn = document.querySelector(".close");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+
+            modal.style.display = "block";
+        });
+        });
+
+        closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });
+
+        const modalTag = document.getElementById("modal-tag");
+        const modalDate = document.getElementById("modal-date");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+            modalTag.textContent = item.dataset.tag;
+            modalDate.textContent = item.dataset.date;
+
+            modal.style.display = "block";
+        });
+        });
+    </script>
+
+</body>
+
+</html>

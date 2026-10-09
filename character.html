@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+    <!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+
+    <!-- キャラクター紹介 ＆ 注意事項用のCSS -->
+    <style>
+        .character-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .character-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .character-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #fffbf0; /* 優しい黄色の背景 */
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 2つ目のカードは画像を右側に配置 */
+        .character-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .character-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* 丸型画像 */
+            border: 4px solid #fff;
+            flex-shrink: 0;
+        }
+
+        .character-info {
+            flex: 1;
+        }
+
+        .character-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin: 0 0 8px 0;
+        }
+
+        .character-sub {
+            font-size: 14px;
+            color: #e57373;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .character-desc {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            margin: 0;
+        }
+
+        /* 注意事項のスタイリング（安全に独立させたスタイル） */
+        .notice-container {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .notice-card {
+            background-color: #fffdf0;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            text-align: center;
+            color: #222;
+        }
+
+        .notice-card .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .notice-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .notice-list li {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .notice-list li::before {
+            content: "・";
+        }
+
+        .highlight-red {
+            color: #d32f2f;
+        }
+
+        .notice-section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .location-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            line-height: 2.0;
+        }
+
+        .location-list li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        /* スマホ向けレイアウト調整 */
+        @media (max-width: 600px) {
+            .character-card,
+            .character-card.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .character-img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--ヘッダー-->    
+    <header class="header">
+        <h1 class="site-title">
+            <a href="index.html">第65回 椙大祭</a>
+        </h1>
+
+        <!--ハンバーガー-->
+        <button class="menu-btn">☰</button>
+
+        <nav class="nav">
+            <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 注意事項エリア -->
+        <div class="notice-container">
+            <div class="notice-card">
+                <div class="title">注意事項</div>
+
+                <ul class="notice-list">
+                    <li>ベビーカーや車いすなど、階段でのご移動が難しい方は、<br>本部（受付右側）に一声おかけください。</li>
+                    <li>ステージ出演者、企画参加者、および当学園の施設・設備を<br><span class="highlight-red">無断で撮影することはご遠慮願います。</span></li>
+                    <li>会場内で撮影された写真をSNS等に載せる際は、プライバシー<br>にご配慮ください。</li>
+                    <li>獲得された景品は<span class="highlight-red">転売をしない</span>ようお願いいたします。見つけた<br>際は相応の対応を致します。</li>
+                    <li>その他お困りごとは近くの赤いジャンパーを着たスタッフか、<br>本部にご連絡ください。</li>
+                </ul>
+
+                <div class="notice-section-title">＜立ち入り禁止場所＞</div>
+
+                <ul class="location-list">
+                    <li>情報社会学部棟・・・1階</li>
+                    <li>情報社会学部メディア棟(トークショー・俳優トークショーのみ立ち入り可)</li>
+                    <li>人間橋・希望橋より北側の建物</li>
+                    <li>図書館</li>
+                    <li>その他、各階看板の立っている場所より奥※階段の使用は可能です</li>
+                </ul>
+            </div>
+        </div>
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">トップへ戻る</a>
+        </div>
+    </main>
+
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+    
+</body>
+</html>

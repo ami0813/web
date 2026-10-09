@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ステージ企画｜第65回椙大祭</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- デザイン調整（タイトル・一覧エリア） -->
+    <style>
+        .plan-title-bg {
+            background-color: #fceea7 !important;
+            width: 100% !important;
+            height: 90px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+        .plan-title-bg h2 {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 2rem !important;
+            color: #4a3b32 !important;
+            text-align: center !important;
+            line-height: 1 !important;
+            letter-spacing: 0.1em;
+        }
+
+        .plan-desc {
+            text-align: center !important;
+            font-size: 1.05rem !important;
+            color: #1a1a1a !important;
+            margin: 25px auto 40px !important;
+            padding: 0 15px !important;
+            line-height: 1.6 !important;
+        }
+
+        /* 下部の一覧エリアのスタイル */
+        .stage-grid-section {
+            max-width: 1100px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: #4a3b32;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #fceea7;
+        }
+
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .grid-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ★画像の全体が見えるように修正★ */
+        .grid-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain !important;
+            background-color: #fcfcfc;
+            padding: 5px;
+        }
+
+        .grid-card-content {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .grid-card-content h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .grid-card-group {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .grid-card-info {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .grid-card-text {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+            margin-top: auto;
+        }
+
+        .grid-card .detail-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #4a3b32;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->    
+    <header class="header">
+        <h1 class="site-title">
+            <a href="index.html">第65回 椙大祭</a>
+        </h1>
+        <button class="menu-btn">☰</button>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="plan.html">企画一覧</a></li>
+                <li><a href="time.html">タイムテーブル</a></li>
+                <li><a href="map.html">学内マップ</a></li>
+                <li><a href="access.html#access">アクセス</a></li>
+                <li><a href="QA.html">QA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- タイトル部分 -->
+        <section class="plan-category">
+            <div class="plan-title-bg">
+                <h2>ステージ企画</h2>
+            </div>
+            <p class="plan-desc">メインステージにて、様々な企画を行います。</p>
+        </section>
+
+        <!-- ① スライドショー -->
+        <section class="slider-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- スライド1 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/オープニング.jpg" alt="オープニング">
+                            <div class="slide-content">
+                                <h3>オープニング</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <div class="slide-info">
+                                    <span>📍 野外ステージ ｜</span>
+                                    <div class="info-times">
+                                        <div>⏰ 10/17(土) 11:00〜11:20</div>
+                                        <div>⏰ 10/18(日) 11:00〜11:10</div>
+                                    </div>
+                                </div>
+                                <p class="slide-text">全員で頑張ります！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド2 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/模擬店.png" alt="模擬店PR">
+                            <div class="slide-content">
+                                <h3>模擬店PR</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <div class="slide-info">
+                                    <span>📍 野外ステージ ｜</span>
+                                    <div class="info-times">
+                                        <div>⏰ 10/17(土) 11:30〜12:00</div>
+                                        <div>⏰ 10/18(日) 11:20〜11:50</div>
+                                    </div>
+                                </div>
+                                <p class="slide-text">模擬店の魅力をギュッとお届け！ぜひ見に来てください！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド3 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/ライブ招待.jpeg" alt="ライブ招待">
+                            <div class="slide-content">
+                                <h3>ライブ招待</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <div class="slide-info">
+                                    <span>📍 野外ステージ ｜</span>
+                                    <div class="info-times">
+                                        <div>⏰ 10/17(土) 12:10〜13:45</div>
+                                        <div>⏰ 10/18(日) 12:00〜13:05</div>
+                                    </div>
+                                </div>
+                                <p class="slide-text">最高のステージを作り上げましょう！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド4 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="いわたまあり.jpeg" alt="トークショー" style="width: 100% !important; height: 400px !important; object-fit: contain !important; background-color: #fceea7;">
+                            <div class="slide-content">
+                                <h3>トークショー</h3>
+                                <p class="slide-group">出演：いわたまありさん</p>
+                                <div class="info-times">
+                                    <div>⏰ 開場 13:00</div>
+                                </div>
+                                <p class="slide-info">📍 メディア棟001 ｜ ⏰ 10/17(土) 14:00〜15:00</p>
+                                <a href="1日目.html" class="detail-btn">詳細を見る ＞</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド5 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="松本怜生宣材写真.jpg" alt="トークショー" style="width: 100% !important; height: 400px !important; object-fit: contain !important; background-color: #fceea7;">
+                            <div class="slide-content">
+                                <h3>俳優トークショー</h3>
+                                <p class="slide-group">出演：松本怜生さん</p>
+                                <div class="info-times">
+                                    <div>⏰ 開場 12:30</div>
+                                </div>
+                                <p class="slide-info">📍 メディア棟001 ｜ ⏰ 10/18(日) 13:30〜14:30</p>
+                                <a href="2日目.html" class="detail-btn">詳細を見る ＞</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド6 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/Sコン.jpeg" alt="Sコン">
+                            <div class="slide-content">
+                                <h3>Sコン</h3>
+                                <div class="slide-info">
+                                    <span> 📍 野外ステージ |</span>
+                                    <div class="info-times">
+                                        <div>⏰ 10/17(土) 15:10〜15:50</div>
+                                        <div>⏰ 10/18(日) 16:45〜17:35</div>
+                                    </div>
+                                </div>
+                                <p class="slide-text">出演者が自身で制作した衣装でランウェイを歩き、個性あふれる作品を<br>披露します！ぜひご覧ください！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド7 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/中夜祭.jpeg" alt="中夜祭">
+                            <div class="slide-content">
+                                <h3>中夜祭</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <p class="slide-info">📍 野外ステージ ｜ ⏰ 10/17(土) 16:00〜17:30</p>
+                                <p class="slide-text">椙大祭１日目は中夜祭で締めくくろう！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド8 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/参加型.jpg" alt="参加型ゲーム">
+                            <div class="slide-content">
+                                <h3>参加型ゲーム</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <p class="slide-info">📍 野外ステージ ｜ ⏰ 10/17(土) 14:30〜15:20</p>
+                                <p class="slide-text">会場にいる皆さんでステージ上のゲームを盛り上げましょう！<br>ゲームに参加で景品ゲット！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド9 -->
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="images/後夜祭.jpg" alt="後夜祭">
+                            <div class="slide-content">
+                                <h3>後夜祭</h3>
+                                <p class="slide-group">出演：大学祭実行委員会</p>
+                                <div class="slide-info">
+                                    <span>📍 野外ステージ ｜</span>
+                                    <div class="info-times">
+                                        <div>⏰ 10/18(日) 15:30〜16:30</div>
+                                        <div>⏰ 10/18(日) 17:50〜18:20</div>
+                                    </div>
+                                </div>
+                                <p class="slide-text">クイズもダンスも火の舞も！最高の思い出を一緒につくろう！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 左右矢印とドット -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ② ステージ企画一覧（グリッド表示） -->
+        <section class="stage-grid-section">
+            <h3 class="section-title">企画一覧</h3>
+            <div class="stage-grid">
+                
+                <!-- カード1 -->
+                <div class="grid-card">
+                    <img src="images/オープニング.jpg" alt="オープニング">
+                    <div class="grid-card-content">
+                        <h4>オープニング</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 11:00〜11:20<br>⏰ 10/18(日) 11:00〜11:10</p>
+                        <p class="grid-card-text">全員で頑張ります！</p>
+                    </div>
+                </div>
+
+                <!-- カード2 -->
+                <div class="grid-card">
+                    <img src="images/模擬店.png" alt="模擬店PR">
+                    <div class="grid-card-content">
+                        <h4>模擬店PR</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 11:30〜12:00<br>⏰ 10/18(日) 11:20〜11:50</p>
+                        <p class="grid-card-text">模擬店の魅力をギュッとお届け！ぜひ見に来てください！</p>
+                    </div>
+                </div>
+
+                <!-- カード3 -->
+                <div class="grid-card">
+                    <img src="images/ライブ招待.jpeg" alt="ライブ招待">
+                    <div class="grid-card-content">
+                        <h4>ライブ招待</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 12:10〜13:45<br>⏰ 10/18(日) 12:00〜13:05</p>
+                        <p class="grid-card-text">最高のステージを作り上げましょう！</p>
+                    </div>
+                </div>
+
+                <!-- カード4 -->
+                <div class="grid-card">
+                    <img src="いわたまあり.jpeg" alt="トークショー">
+                    <div class="grid-card-content">
+                        <h4>トークショー</h4>
+                        <p class="grid-card-group">出演：いわたまありさん</p>
+                        <p class="grid-card-info">📍 メディア棟001<br>⏰ 10/17(土) 14:00〜15:00（開場 13:00）</p>
+                        <a href="1日目.html" class="detail-btn">詳細を見る ＞</a>
+                    </div>
+                </div>
+
+                <!-- カード5 -->
+                <div class="grid-card">
+                    <img src="松本怜生宣材写真.jpg" alt="俳優トークショー">
+                    <div class="grid-card-content">
+                        <h4>俳優トークショー</h4>
+                        <p class="grid-card-group">出演：松本怜生さん</p>
+                        <p class="grid-card-info">📍 メディア棟001<br>⏰ 10/18(日) 13:30〜14:30（開場 12:30）</p>
+                        <a href="2日目.html" class="detail-btn">詳細を見る ＞</a>
+                    </div>
+                </div>
+
+                <!-- カード6 -->
+                <div class="grid-card">
+                    <img src="images/Sコン.jpeg" alt="Sコン">
+                    <div class="grid-card-content">
+                        <h4>Sコン</h4>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 15:10〜15:50<br>⏰ 10/18(日) 16:45〜17:35</p>
+                        <p class="grid-card-text">出演者が自身で制作した衣装でランウェイを歩き、個性あふれる作品を披露します！</p>
+                    </div>
+                </div>
+
+                <!-- カード7 -->
+                <div class="grid-card">
+                    <img src="images/中夜祭.jpeg" alt="中夜祭">
+                    <div class="grid-card-content">
+                        <h4>中夜祭</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 16:00〜17:30</p>
+                        <p class="grid-card-text">椙大祭１日目は中夜祭で締めくくろう！</p>
+                    </div>
+                </div>
+
+                <!-- カード8 -->
+                <div class="grid-card">
+                    <img src="images/参加型.jpg" alt="参加型ゲーム">
+                    <div class="grid-card-content">
+                        <h4>参加型ゲーム</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/17(土) 14:30〜15:20</p>
+                        <p class="grid-card-text">会場にいる皆さんでステージ上のゲームを盛り上げましょう！ゲーム参加で景品ゲット！</p>
+                    </div>
+                </div>
+
+                <!-- カード9 -->
+                <div class="grid-card">
+                    <img src="images/後夜祭.jpg" alt="後夜祭">
+                    <div class="grid-card-content">
+                        <h4>後夜祭</h4>
+                        <p class="grid-card-group">出演：大学祭実行委員会</p>
+                        <p class="grid-card-info">📍 野外ステージ<br>⏰ 10/18(日) 15:30〜16:30 / 17:50〜18:20</p>
+                        <p class="grid-card-text">クイズもダンスも火の舞も！最高の思い出を一緒につくろう！</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 戻るボタン -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="plan.html" class="back-btn">← 企画一覧に戻る</a>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://x.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 制御用スクリプト -->
+    <script>
+        // ハンバーガーメニュー
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+        if (btn) {
+            btn.addEventListener("click", () => { 
+                nav.classList.toggle("active"); 
+            });
+        }
+
+        // URLから「?slide=数値」を取得
+        const params = new URLSearchParams(window.location.search);
+        const slideIndex = params.get('slide');
+
+        // Swiperの設定（自動再生あり + マウスホバーで一時停止）
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+            // 5秒ごとに自動切り替え（触っている間はストップ）
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            
+            initialSlide: slideIndex !== null ? parseInt(slideIndex, 10) : 0,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30
+                }
+            },
+            
+            on: {
+                init: function () {
+                    if (slideIndex !== null) {
+                        this.slideToLoop(parseInt(slideIndex, 10), 0);
+                    }
+                }
+            }
+        });
+
+        // ページ全体の画像などがすべて読み込まれた後に、再度位置を微調整・更新する
+        window.addEventListener('load', () => {
+            if (slideIndex !== null && typeof swiper !== 'undefined') {
+                swiper.update();
+                swiper.slideToLoop(parseInt(slideIndex, 10), 0);
+            }
+        });
+
+        // タイムテーブルからの遷移で指定のスライドへ飛ぶ処理
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const slideIndex = params.get('slide');
+
+            if (slideIndex !== null && typeof swiper !== 'undefined') {
+                swiper.slideToLoop(parseInt(slideIndex, 10), 0);
+            }
+        });
+    </script>
+</body>
+
+</html>
+    

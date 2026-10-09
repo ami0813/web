@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ステージ企画｜第65回椙大祭</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- デザイン調整（タイトルの中央揃え） -->
+    <style>
+        .plan-title-bg {
+            background-color: #fceea7 !important;
+            width: 100% !important;
+            height: 90px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+        .plan-title-bg h2 {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 2rem !important;
+            color: #4a3b32 !important;
+            text-align: center !important;
+            line-height: 1 !important;
+            letter-spacing: 0.1em;
+        }
+
+        .plan-desc {
+            text-align: center !important;
+            font-size: 1.05rem !important;
+            color: #1a1a1a !important;
+            margin: 25px auto 40px !important;
+            padding: 0 15px !important;
+            line-height: 1.6 !important;
+        }
+        .slide-card {
+            display: flex !important;
+            flex-direction: row !important;      /* 横並び */
+            align-items: stretch !important;    /* 高さ統一 */
+            width: 100% !important;
+            height: auto !important;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .slide-card img {
+            width: 50% !important;              /* 写真幅：半分 */
+            height: auto !important;
+            object-fit: cover !important;        /* トリミング */
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            border-top-right-radius: 0 !important;
+        }
+
+        .slide-content {
+            width: 50% !important;              /* 文章幅：半分 */
+            padding: 20px 25px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important; /* 上下中央寄せ */
+        }
+
+        /* スマホなど画面が狭い時は縦並びに戻す設定 */
+        @media (max-width: 768px) {
+            .slide-card {
+                flex-direction: column !important;
+            }
+            .slide-card img,
+            .slide-content {
+                width: 100% !important;
+            }
+            .slide-card img {
+                height: 200px !important;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 16px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->    
+    <header class="header">
+        <h1 class="site-title">
+            <a href="index.html">第65回 椙大祭</a>
+        </h1>
+        <button class="menu-btn">☰</button>
+
+        <nav class="nav">
+            <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- タイトル部分 -->
+        <section class="plan-category">
+            <div class="plan-title-bg">
+                <h2>室内企画</h2>
+            </div>
+            <p class="plan-desc">外国語学部棟、情報社会学部棟、生活科学部棟などで企画を行います。</p>
+            <div class="card-container">
+        <div class="card food-card">
+            <h3 class="card-title">インフォメーション</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語学部棟アーチ下</span></p>
+        <div class="card-image">
+            <img src="images/インフォメーション.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">皆様が大学祭をより楽しく過ごせるよう、親身になって対応します。</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">ワークショップ"星の森"　17日のみ</h3>
+                    <p class="card-subtitle">磯部ゼミ(星が丘商店街振興組合)</p>
+                    <p class="card-location"><span class="highlight">G階</span></p>
+        <div class="card-image">
+            <img src="images/磯部ゼミ（星ヶ丘商店街振興組合共催）.png" alt="磯部ゼミ(星が丘商店街振興組合)">
+        </div>
+                    <p class="card-desc">みんなで廃材のペットボトルキャップと特殊な絵の具を使って大きなパネルに星空を作ります。完成した作品はクリスマスのころイルミネーションとして飾り、光らせます。</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">カラオケ</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語108</span></p>
+        <div class="card-image">
+            <img src="images/カラオケ.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">90点以上取って景品をゲットしよう！</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">男装喫茶 Pink Rose</h3>
+                    <p class="card-subtitle">ちーむ☆燃焼系</p>
+                    <p class="card-location"><span class="highlight">外国語205</span></p>
+        <div class="card-image">
+            <img src="images/男装喫茶Pink Rose.png" alt="ちーむ☆燃焼系">
+        </div>
+                    <p class="card-desc">個性豊かなアイドルたちが皆様をおもてなしします！あなたの推しを探しにぜひお越しください！！</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">景品交換所</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語206</span></p>
+        <div class="card-image">
+            <img src="images/スタンプラリー.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">スタンプラリー・お楽しみ券の景品交換をしています！</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">景品交換所</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語206</span></p>
+        <div class="card-image">
+            <img src="images/景品交換.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">スタンプラリー・お楽しみ券の景品交換をしています！</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">メイク企画</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語314</span></p>
+        <div class="card-image">
+            <img src="images/メイク.JPG" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">自分に似合うスタイルを発見してみよう!顔タイプ診断・パーソナルカラー診断・骨格診断で自分に似合うスタイルを発見し、ハンドメイド体験も楽しめます!</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">melfie～ハギレ界隈へようこそ～</h3>
+                    <p class="card-subtitle">melfie</p>
+                    <p class="card-location"><span class="highlight">外国語415</span></p>
+        <div class="card-image">
+            <img src="images/melfie.png" alt="melfie(メルフィ)">
+        </div>
+                    <p class="card-desc">アップサイクル商品販売、ワークショップを行っています。ぜひお気軽にお立ち寄りください!</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">サバゲー</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語417</span></p>
+        <div class="card-image">
+            <img src="images/サバゲー.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">１試合が短時間のため気軽に参加できます!ぜひお越しください!</p>
+        </div>
+        <div class="card food-card">
+            <h3 class="card-title">すぎモン ゲットだぜ!!</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語418</span></p>
+        <div class="card-image">
+            <img src="images/迷路.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">クイズですぎモンをゲットし君もすぎモンマスターになろう！</p>
+        </div>
+        <!-- 8つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">fleur plume【ネイルチップ】</h3>
+                    <p class="card-subtitle">fleur plume</p>
+                    <p class="card-location"><span class="highlight">外国語419</span></p>
+        <div class="card-image">
+            <img src="images/fluer plume.png" alt="Fleur Plume">
+        </div>
+                    <p class="card-desc">種類豊富なハンドメイドのネイルチップを販売しています！</p>
+        </div>
+        <!-- 9つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">椙山茶会・いっぷく茶屋</h3>
+                    <p class="card-subtitle">茶道部</p>
+                    <p class="card-location"><span class="highlight">外国語420</span></p>
+        <div class="card-image">
+            <img src="images/椙山茶会.png" alt="茶道部">
+        </div>
+                    <p class="card-desc">お抹茶・お菓子を用意してお待ちしております。</p>
+        </div>
+        <!-- 10つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">資生堂パーソナルカラー診断・癒やしのタッチケア体験会　17日のみ</h3>
+                    <p class="card-subtitle">TEAM RENATA</p>
+                    <p class="card-location"><span class="highlight">外国語501,502</span></p>
+        <div class="card-image">
+            <img src="images/資生堂×TEAM RENATA.png" alt="TEAM RENATA">
+        </div>
+                    <p class="card-desc">もっと自分らしく、輝く毎日へ。資生堂ジャパンによるパーソナルカラー診断と癒やしのタッチケアで美の楽しさと心の豊かさをお届けします！</p>
+        </div>
+        <!-- 11つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">漫画研究会</h3>
+                    <p class="card-subtitle">漫画研究会</p>
+                    <p class="card-location"><span class="highlight">外国語503</span></p>
+        <div class="card-image">
+            <img src="images/漫画研究会.png" alt="漫画研究会">
+        </div>
+                    <p class="card-desc">部員の描いたイラストを展示しています。ぜひ、ご覧ください！</p>
+        </div>
+        <!-- 12つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">ボッチャであそぼう!　17日のみ</h3>
+                    <p class="card-subtitle">YELLTECH</p>
+                    <p class="card-location"><span class="highlight">外国語504</span></p>
+        <div class="card-image">
+            <img src="images/ボッチャであそぼう.png" alt="YELLTECH">
+        </div>
+                    <p class="card-desc">大人も子供も車椅子の方もどんな方でも楽しんでいただけると思うのでぜひ来てくださいー！</p>
+        </div>
+        <!-- 13つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">クラフト作品展示</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語505</span></p>
+        <div class="card-image">
+            <img src="images/クラフト.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">皆で作品を作って楽しもう♪</p>
+        </div>
+        <!-- 14つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">ボードゲームだョ！全員集合</h3>
+                    <p class="card-subtitle">TRPG同好会ーすぴかー</p>
+                    <p class="card-location"><span class="highlight">外国語507</span></p>
+        <div class="card-image">
+            <img src="images/ボードゲーム.png" alt="TRPG同好会ーすぴかー">
+        </div>
+                    <p class="card-desc">ボードゲームで遊べます！楽しいよ！！！！！</p>
+        </div>
+         <!-- 15つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">子ども向け</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語508</span></p>
+        <div class="card-image">
+            <img src="images/子ども向け.jpg" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">テーマは「平成レトロ」!平成レトロを楽しんで、全部クリアするといいことあるかも♪</p>
+        </div>
+        <!-- 16つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">ミュージカル『人間になりたがった猫』</h3>
+                    <p class="card-subtitle">座・タータンチェック</p>
+                    <p class="card-location"><span class="highlight">外国語509</span></p>
+        <div class="card-image">
+            <img src="images/座・タータンチェック.png" alt="座・タータンチェック">
+        </div>
+                    <p class="card-desc">キャスト・スタッフ一同、心を込めてお届けします。皆様のご来場お待ちしております！！</p>
+        </div>
+        <!-- 17つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">こども縁日</h3>
+                    <p class="card-subtitle">Childish～保育教材研究会～</p>
+                    <p class="card-location"><span class="highlight">外国語510</span></p>
+        <div class="card-image">
+            <img src="images/子供縁日.png" alt="Childish～保育教材研究会～">
+        </div>
+                    <p class="card-desc">楽しく遊べるこども縁日を開いてます！最後におかしももらえるので子供も大人も来てください！</p>
+        </div>
+        <!-- 18つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">みんなで遊ぼう！野崎ワールド</h3>
+                    <p class="card-subtitle">野崎ゼミ</p>
+                    <p class="card-location"><span class="highlight">外国語511</span></p>
+        <div class="card-image">
+            <img src="images/野崎ワールド.png" alt="野崎ゼミ">
+        </div>
+                    <p class="card-desc">子どもから大人まで楽しめる遊びが盛りだくさん！ぜひ遊びに来てください！</p>
+        </div>
+        <!-- 19つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">ハンドメイドの作品販売</h3>
+                    <p class="card-subtitle">ハンドクラフト部</p>
+                    <p class="card-location"><span class="highlight">外国語512</span></p>
+        <div class="card-image">
+            <img src="images/ハンドメイド作品販売.png" alt="ハンドクラフト部">
+        </div>
+                    <p class="card-desc">レジンや樹脂粘土のアクセサリー、小物などの作品を販売しています！</p>
+        </div>
+        <!-- 20つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">占いの館</h3>
+                    <p class="card-subtitle">易学研究会</p>
+                    <p class="card-location"><span class="highlight">外国語513</span></p>
+        <div class="card-image">
+            <img src="images/占いの館.png" alt="易学研究会">
+        </div>
+                    <p class="card-desc">恋愛・進路・対人関係など、気になる悩みを１度占ってみませんか？</p>
+        </div>
+        <!-- 21つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">当てろクイズ射的　17日のみ</h3>
+                    <p class="card-subtitle">うぇるかむ</p>
+                    <p class="card-location"><span class="highlight">外国語514</span></p>
+        <div class="card-image">
+            <img src="images/クイズ射的.png" alt="うぇるかむ">
+        </div>
+                    <p class="card-desc">クイズに答えて射的にチャレンジ！お菓子がもらえるよ～</p>
+        </div>
+        <!-- 22つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">Switch Sports</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">外国語515</span></p>
+        <div class="card-image">
+            <img src="images/新企画.jpg" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">Switch Sportsを使ったゲーム企画をやります！ぜひ遊びに来てください！</p>
+        </div>
+        <!-- 27つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">デジタル＆クラフトby宮下・亀井ゼミ　18日のみ</h3>
+                    <p class="card-subtitle">亀井・松山・楊・宮下ゼミ合同情報デザイン学科研究展示</p>
+                    <p class="card-location"><span class="highlight">外国語501,502,504</span></p>
+        <div class="card-image">
+            <img src="images/デジタル＆クラフト.png" alt="亀井・松山・楊・宮下ゼミ合同情報デザイン学科研究展示">
+        </div>
+                    <p class="card-desc">作品展示とワークショップやってます！</p>
+        </div>
+        <!-- 23つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">書道部</h3>
+                    <p class="card-subtitle">書道部</p>
+                    <p class="card-location"><span class="highlight">情社503</span></p>
+        <div class="card-image">
+            <img src="images/書道部.png" alt="書道部">
+        </div>
+                    <p class="card-desc">書道部員による作品展示と、気軽に参加できる書道体験を行います。ぜひお立ち寄りください。</p>
+        </div>
+        <!-- 24つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">お化け屋敷(大人向け)</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">情社501</span></p>
+        <div class="card-image">
+            <img src="images/お化け屋敷.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">今年最大の恐怖体験をぜひ！</p>
+        </div>
+        <!-- 24つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">お化け屋敷(子ども向け)</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">情社502</span></p>
+        <div class="card-image">
+            <img src="images/お化け屋敷　子ども.JPG" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">みんなが楽しめるような仕掛けがたくさん!ぜひチャレンジしに来てください!!</p>
+        </div>
+        <!-- 25つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">大爆発展</h3>
+                    <p class="card-subtitle">芸術・文化同好会ミューズ</p>
+                    <p class="card-location"><span class="highlight">情社504</span></p>
+        <div class="card-image">
+            <img src="images/大爆発展.png" alt="芸術・文化同好会ミューズ">
+        </div>
+                    <p class="card-desc">芸術魂が大爆発!?芸術文化の好きな椙大生の自作の美術展です!!</p>
+        </div>
+        <!-- 26つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">性感染症から自分を守る、大切な人を守るために　17日のみ</h3>
+                    <p class="card-subtitle">椙山看護＆千種保健所</p>
+                    <p class="card-location"><span class="highlight">情社505</span></p>
+        <div class="card-image">
+            <img src="images/学んで、守って、つながる　知るだけで変わる.png" alt="椙山看護＆千種保健所">
+        </div>
+                    <p class="card-desc">性感染症から自分を守ることは、未来の自分の健康と安心を守る大切な行動です。自分のために、ぜひ一度立ち寄ってみてください。</p>
+        </div>
+        <!-- 28つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">Our Best Shot　17日のみ</h3>
+                    <p class="card-subtitle">写真部</p>
+                    <p class="card-location"><span class="highlight">生活B104</span></p>
+        <div class="card-image">
+            <img src="images/写真部.png" alt="写真部">
+        </div>
+                    <p class="card-desc">部員それぞれの視点から見える景色を感じてもらえたら嬉しいです。</p>
+        </div>
+        <!-- 29つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">香りでつなぐ能登</h3>
+                    <p class="card-subtitle">能登半島地震被災における伝統漆器の再活用と復興支援に関する取組</p>
+                    <p class="card-location"><span class="highlight">生活B105</span></p>
+        <div class="card-image">
+            <img src="images/香りでつなぐ能登.png" alt="能登半島地震被災における伝統漆器の再活用と復興支援に関する取組">
+        </div>
+                    <p class="card-desc">世界にひとつだけのアロマスタンド、見つけませんか？かわいいを選んで、能登にエールを。</p>
+        </div>
+        <!-- 30つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">マリカー</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">生活B107</span></p>
+        <div class="card-image">
+            <img src="images/マリカー.png" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">マリオカートで対決をして１位を目指そう！</p>
+        </div>
+        <!-- 31つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">椙フォライブ2026～Sound Canvas～</h3>
+                    <p class="card-subtitle">椙山フォーク・軽音楽部</p>
+                    <p class="card-location"><span class="highlight">第三競技場</span></p>
+        <div class="card-image">
+            <img src="images/椙山フォークライブ.png" alt="椙山フォーク">
+        </div>
+                    <p class="card-desc">様々なジャンルのバンドがそれぞれの好きな曲を演奏します。</p>
+        </div>
+        <!-- 35つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">テラス</h3>
+                    <p class="card-subtitle">大学祭実行委員会</p>
+                    <p class="card-location"><span class="highlight">星丘テラス</span></p>
+        <div class="card-image">
+            <img src="images/テラス.jpeg" alt="大学祭実行委員会">
+        </div>
+                    <p class="card-desc">友達や家族と写真を撮りながら大学祭を回ろう！</p>
+        </div>
+          <!-- 33つ目のカード -->
+        <div class="card food-card">
+            <h3 class="card-title">すぎけつびより～椙山から多くの命へ！～　17日のみ</h3>
+                    <p class="card-subtitle">はぴなす</p>
+                    <p class="card-location"><span class="highlight">キャンパスヤード</span></p>
+        <div class="card-image">
+            <img src="images/献血.png" alt="はぴなす">
+        </div>
+                    <p class="card-desc">ご協力お願いします!!あなたの一歩が、多くの命につながります!</p>
+        </div>
+</div>
+        </section>
+
+        <!-- 戻るボタン -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="plan.html" class="back-btn">← 企画一覧に戻る</a>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 制御用スクリプト -->
+    <script>
+        // ハンバーガーメニュー
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+        if (btn) {
+            btn.addEventListener("click", () => { 
+                nav.classList.toggle("active"); 
+            });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+    <title>第65回椙大祭</title> <!-- タブや検索結果に表示されるタイトル -->
+
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSの読み込み -->
+<!--フォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--ヘッダー-->    
+    <header class="header">
+            <h1 class="site-title">
+                <a href="index.html">第65回 椙大祭</a>
+            </h1>
+            <!--ハンバーガー-->
+            <button class="menu-btn">☰</button>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="festival-1.png" alt="大学祭　ロゴ">
+        </section> 
+
+<!-- Q&Aセクション -->
+        <section id="qa" class="section qa-section">
+            <h2>Q&A</h2>
+
+            <div class="qa-container">
+                <details class="qa-item">
+                    <summary class="qa-question">
+                        <span>Q.入場に予約やチケットはいりますか？</span>
+                    </summary>
+                    <div class="qa-answer">
+                        <p>事前予約やチケットは不要です。どなたでもご自由にご入場いただけます。</p>
+                    </div>
+                </details>
+
+                <details class="qa-item">
+                    <summary class="qa-question">
+                        <span>Q.女子大ですが、男性もはいれますか？</span>
+                    </summary>
+                    <div class="qa-answer">
+                        <p>はい、男性の方もご入場いただけます。ぜひご来場ください。</p>
+                    </div>
+                </details>
+
+                <details class="qa-item">
+                    <summary class="qa-question">
+                        <span>Q.駐車場は利用出来ますか？</span>
+                    </summary>
+                    <div class="qa-answer">
+                        <p>学内に来場者用の駐車場はございません。公共交通機関をご利用のうえお越しください。</p>
+                    </div>
+                </details>
+
+                <details class="qa-item">
+                    <summary class="qa-question">
+                        <span>Q.車いすで来ても大丈夫ですか？</span>
+                    </summary>
+                    <div class="qa-answer">
+                        <p>大丈夫です。学内にはスロープや多目的トイレを完備しております。サポートが必要な場合はお近くの実行委員までお声がけください。</p>
+                    </div>
+                </details>
+
+                <details class="qa-item">
+                    <summary class="qa-question">
+                        <span>Q.飲食はできますか？</span>
+                    </summary>
+                    <div class="qa-answer">
+                        <p>指定の飲食スペースや模擬店エリアにてお召し上がりいただけます。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">トップへ戻る</a>
+        </div>
+    </main>
+
+    <!--フッター-->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h3>椙山女学園大学</h3>
+                <h2>第65回 椙大祭</h2>
+                <p>〒464-8662</p>
+                <p>愛知県名古屋市千種区星が丘元町17－3</p>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <a href="https://www.sugiyama-u.ac.jp/index.html" target="_blank" rel="noopener noreferrer">大学公式サイト</a><br>
+                    <a href="https://www.instagram.com/sugidaisai?igsh=Z2ZrM3JwNXdm" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://X.com/sugidaisai?s=21/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+                </div>
+            </div>
+
+
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="plan.html">企画一覧</a></li>
+                    <li><a href="time.html">タイムテーブル</a></li>
+                    <li><a href="map.html">学内マップ</a></li>
+                    <li><a href="access.html#access">アクセス</a></li>
+                    <li><a href="QA.html">QA</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 第65回 椙大祭実行委員会</p>
+    </footer>
+    
+
+
+<!-- ★ここに追加（モーダル） -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <div class="modal-header">
+                <span id="modal-tag" class="news-tag"></span>
+                <span id="modal-date" class="news-date"></span>
+            </div>
+
+<h2 id="modal-title"></h2>
+<p id="modal-detail"></p>
+
+            <p class="modal-contact">
+            お問い合わせ：〇〇@〇〇.jp
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- ★ここに追加（JS） -->
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        const items = document.querySelectorAll(".news-item");
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDetail = document.getElementById("modal-detail");
+        const closeBtn = document.querySelector(".close");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+
+            modal.style.display = "block";
+        });
+        });
+
+        closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });
+
+        const modalTag = document.getElementById("modal-tag");
+        const modalDate = document.getElementById("modal-date");
+
+        items.forEach(item => {
+        item.addEventListener("click", () => {
+            modalTitle.textContent = item.dataset.title;
+            modalDetail.textContent = item.dataset.detail;
+            modalTag.textContent = item.dataset.tag;
+            modalDate.textContent = item.dataset.date;
+
+            modal.style.display = "block";
+        });
+        });
+    </script>
+
+    
+    
+</body>
+
+</html>
