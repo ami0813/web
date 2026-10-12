@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ステージ企画｜第65回椙大祭</title>
+    <meta name="viewport" content="width=1024">
 
     <link rel="stylesheet" href="style.css">
     <!-- フォント -->
@@ -89,6 +88,59 @@
                 border-bottom-left-radius: 0;
                 border-top-right-radius: 16px !important;
             }
+        }
+        /* ポップアップ（モーダル）表示用 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        /* カードの上にマウスをのせたときに指マークにする */
+        .grid-card {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -306,8 +358,86 @@
                 nav.classList.toggle("active"); 
             });
         }
+    document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("cardModal");
+            const modalImg = document.getElementById("modalImg");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalBody = document.getElementById("modalBody");
+            const closeBtn = document.querySelector(".close-btn");
 
+            // カード全体（.card）をクリック対象にする
+            const cards = document.querySelectorAll(".card");
+
+            cards.forEach(card => {
+                card.style.cursor = "pointer";
+
+                card.addEventListener("click", () => {
+                    if (!modal) return;
+
+                    // カード内の画像とタイトルを取得
+                    const img = card.querySelector("img");
+                    const title = card.querySelector(".card-title") || card.querySelector("h3");
+
+                    // 1. 画像をセット（一番上に表示される）
+                    if (img) {
+                        modalImg.src = img.src;
+                        modalImg.style.display = "block";
+                    } else {
+                        modalImg.style.display = "none";
+                    }
+
+                    // 2. タイトルをセット
+                    if (title) {
+                        modalTitle.textContent = title.textContent;
+                    } else {
+                        modalTitle.textContent = "企画詳細";
+                    }
+
+                    // 3. テキスト要素（サブタイトル、場所、説明文など）だけを抽出してセット
+                    const clone = card.cloneNode(true);
+                    
+                    // 複製側から画像とタイトルを削除（2重表示を防ぐ）
+                    const cloneImg = clone.querySelector(".card-image") || clone.querySelector("img");
+                    const cloneTitle = clone.querySelector(".card-title") || clone.querySelector("h3");
+                    if (cloneImg) cloneImg.remove();
+                    if (cloneTitle) cloneTitle.remove();
+
+                    // 下部に余計な高さを出さないようCSS調整
+                    clone.style.height = "auto";
+                    clone.style.margin = "0";
+                    clone.style.padding = "0";
+
+                    modalBody.innerHTML = clone.innerHTML;
+
+                    // モーダルを表示
+                    modal.style.display = "flex";
+                });
+            });
+
+            // 閉じる処理
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                    modal.style.display = "none";
+                });
+            }
+            window.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
     </script>
+
+    <!-- 拡大表示用モーダル構造 -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <!-- 順番を画像→タイトル→本文の順に修正 -->
+            <img id="modalImg" src="" alt="">
+            <h3 id="modalTitle" style="margin: 15px 0 10px 0; font-size: 1.4rem; color: #4a3b32;"></h3>
+            <div id="modalBody" style="font-size: 0.95rem; color: #333; line-height: 1.6;"></div>
+        </div>
+    </div>
 </body>
 
 </html>
