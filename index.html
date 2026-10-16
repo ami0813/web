@@ -42,17 +42,20 @@
         <section class="hero">
             <img src="festival-1.png" alt="大学祭 ロゴ">
             
-            <!-- カウントダウン表示エリア（初期状態は隠す） -->
-            <div class="countdown-container" style="visibility: hidden;">
-                <p class="countdown-title">開催まであと</p>
-                <div class="countdown-timer">
-                    <span id="days">00</span>日
-                    <span id="hours">00</span>時間
-                    <span id="minutes">00</span>分
-                    <span id="seconds">00</span>秒
-                </div>
-            </div>
-
+            <!-- 表示だけ隠す（JSのエラーを防ぐため要素は残す） -->
+<div class="countdown-container" style="display: none;">
+    <p class="countdown-title">開催まであと</p>
+    <div class="countdown-timer">
+        <span id="days">00</span>日
+        <span id="hours">00</span>時間
+        <span id="minutes">00</span>分
+        <span id="seconds">00</span>秒
+    </div>
+</div>
+<!-- 表示エリア -->
+<div class="countdown-container">
+    <p class="countdown-title">椙大祭1日目！</p>
+</div>
             <div class="event-info">
                     <p class="event-main">第65回椙大祭</p>
                     <p class="theme-title">
@@ -146,7 +149,18 @@
     </div>
     <p class="news-item-title">トークショー・俳優トークショーチケット好評発売中！（イープラス）</p>
 </div>
-
+<!-- 項目：Webパンフレット公開 -->
+<div class="news-item" 
+     data-title="Webパンフレット公開" 
+     data-detail='第65回椙大祭のWebパンフレットを公開しました！<br><a href="https://sugidaisai.github.io/sugidaisai-web-pamphlet/" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: underline;"> パンフレットを見る</a>' 
+     data-tag="お知らせ" 
+     data-date="2026.10.16">
+    <div class="news-meta">
+        <span class="news-tag">お知らせ</span>
+        <span class="news-date">2026.10.16</span>
+    </div>
+    <p class="news-item-title">Webパンフレット公開</p>
+</div>
 <!-- モーダル本体（共通で1つあればOKです） -->
 <div id="modal" class="modal">
     <div class="modal-content">
@@ -308,7 +322,7 @@
         items.forEach(item => {
             item.addEventListener("click", () => {
                 modalTitle.textContent = item.dataset.title;
-                modalDetail.textContent = item.dataset.detail;
+                modalDetail.innerHTML = item.dataset.detail;
                 modalTag.textContent = item.dataset.tag;
                 modalDate.textContent = item.dataset.date;
 
